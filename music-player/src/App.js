@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/home'
-import Login from './pages/login'
-import DashboardPage from './pages/dashboard' // Import dashboardPage component
+import Home from './components/home'
+import Login from './components/auth'
+import DashboardPage from './components/dashboard' // Import dashboardPage component
 import './App.css'
 import { useEffect, useState } from 'react'
 
