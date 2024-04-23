@@ -1,0 +1,10 @@
+import React from 'react'
+import ".."
+
+
+export default function Library() {
+    return (
+        <div className='screen-container'>Library from screens</div>
+            )
+}
+
