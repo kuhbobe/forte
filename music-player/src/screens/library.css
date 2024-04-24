@@ -36,6 +36,17 @@
 .playlist-card:hover .playlist-fade {
     opacity: 1;
 }
+
+.playlist-card:hover .playlist-title {
+    color: rgba(255, 255, 255, 0.883); 
+}
+
+.playlist-card:hover .playlist-subtitle {
+    color: rgba(255, 255, 255, 0.883); 
+}
+
+
+
 .playlist-image {
     width: 100%;
     aspect-ratio: 1;
