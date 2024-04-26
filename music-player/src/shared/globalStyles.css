@@ -11,3 +11,7 @@
         ),
         repeating-linear-gradient(#0f162155, #233656)
 }
+
+.flex {
+    display: flex;
+}
