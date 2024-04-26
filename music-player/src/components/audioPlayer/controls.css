@@ -23,16 +23,16 @@
   width: 70px;
   height: 70px;
   border-radius: 30px;
-  background-color: #c96850;
+  background-color: #27354d;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: inset -4px -4px 10px #55291e, inset 4px 4px 10px 1px #ffae9a;
+  box-shadow: inset -4px -4px 10px #27354d7f, inset 4px 4px 10px 1px #2d8fcf;
 }
 
 .play-pause-btn.active {
-  box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px 1px #753d30;
+  box-shadow: inset -4px -4px 10px #2d8fcf, inset 4px 4px 10px 1px #27354d5a;
 }
 
 .play-pause-btn:hover {

@@ -105,7 +105,7 @@ export default function AudioPLayer({
           isPlaying={true}
           image={currentTrack?.album?.images[0]?.url}
           size={300}
-          color="#C96850"
+          color="#2d8fcf"
         />
       </div>
       <div className="player-right-body flex">
