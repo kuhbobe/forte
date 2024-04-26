@@ -1,12 +1,12 @@
 .widgetcard-body {
   position: relative;
   width: 24%;
-  height: 74%;
+  height: 105%;
   border-radius: 30px;
   background: rgb(30, 42, 62);
   background: linear-gradient(
     75deg,
-    rgb(40, 58, 88) 0%,
+    rgb(40, 58, 88) 100%,
     rgba(54, 69, 98, 0) 100%
   );
   padding: 1% 3%;
@@ -14,9 +14,6 @@
   cursor: pointer;
 }
 
-.widgetcard-body:hover {
-  transform: scale(1.05);
-}
 
 .widget-title {
   font-size: 18px;
@@ -28,7 +25,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 84%;
+  width: 100%;
   height: 34%;
   border-radius: 30px;
   background: linear-gradient(

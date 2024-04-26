@@ -1,7 +1,7 @@
 .widgets-body {
   width: 95%;
   height: 50%;
-  margin: 2% auto 3%;
+  margin: 3.9% auto 3%; /* Adjusted margin-top */
   background: rgb(30, 42, 62);
   border-radius: 30px;
   justify-content: space-evenly;
