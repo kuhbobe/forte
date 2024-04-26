@@ -2,7 +2,7 @@ import React from "react";
 import "./progressCircle.css";
 
 const Circle = ({ color, percentage, size, strokeWidth }) => {
-  const radius = size / 2 - 10;
+  const radius = size / 2 - 20;
   const circ = 2 * Math.PI * radius - 20;
   const strokePct = ((100 - Math.round(percentage)) * circ) / 100;
 
