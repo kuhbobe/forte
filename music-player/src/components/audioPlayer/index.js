@@ -60,24 +60,25 @@ export default function AudioPLayer({
   useEffect(() => {
     audioRef.current.pause();
     audioRef.current = new Audio(audioSrc);
-
     setTrackProgress(audioRef.current.currentTime);
 
     if (isReady.current) {
-      audioRef.current.play();
-      setIsPlaying(true);
-      startTimer();
+        audioRef.current.play();
+        setIsPlaying(true);
+        startTimer();
     } else {
-      isReady.current = true;
+        isReady.current = true;
     }
-  }, [currentIndex]);
+}, [currentIndex, audioSrc]);
+
 
   useEffect(() => {
     return () => {
-      audioRef.current.pause();
-      clearInterval(intervalRef.current);
+        audioRef.current.pause();
+        clearInterval(intervalRef.current);
     };
-  }, []);
+}, []);
+
 
   const handleNext = () => {
     if (currentIndex < total.length - 1) {
