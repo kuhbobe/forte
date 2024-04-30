@@ -6,7 +6,7 @@ function Sidebar() {
   return (
  <div className="text-gray-500 p-5 text-sm border-r
  border-gray-900">
-    <div>
+    <div className='space-y-4'>
         <button  className="flex items-center space-x-2 
         hover:text-white">
      < HomeIcon className='w-5 h-5'/>
@@ -44,6 +44,23 @@ function Sidebar() {
      <p>Your Episodes</p>
      </button>
 <hr className="border-5-[0.1x] border-gray-900" />
+
+{/* Playlists */}
+
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
+<p className='cursor-pointer hover:text-white'> Playlist name ...</p>
     </div>
  </div>
   )
