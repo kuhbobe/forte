@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from "../components/sidebar";
 import Library from "../screens/library";
 import Player from "../screens/player";
-import Trending from "../screens/trending";
+import Profile from '../screens/profile';
 import Feed from "../screens/feed";
 import Favorites from "../screens/favorites";
 import Login from "../screens/login"
@@ -40,7 +40,7 @@ export default function Home() {
             <Routes>
            <Route path="/" element= {<Library />} /> 
            <Route path="/feed" element= {<Feed />} /> 
-           <Route path="/trending" element= {<Trending />} /> 
+           <Route path="/profile" element= {<Profile />} /> 
            <Route path="/player" element= {<Player />} /> 
            <Route path="/favorites" element= {<Favorites />} /> 
            </Routes>
