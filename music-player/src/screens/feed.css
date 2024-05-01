@@ -8,9 +8,9 @@
     justify-content: space-between;
 }
 
-.playlist-card {
+.category-card {
     position: relative;
-    width: 15%;
+    width: 18%;
     height: 50%;
     border-radius: 20px;
     background-color: rgb(30, 42, 62);
@@ -27,26 +27,26 @@
     cursor: pointer;
 }
 
-.playlist-card:hover {
+.category-card:hover {
     transform: scale(1.02);
 }
 
-.playlist-card:hover .playlist-fade {
+.category-card:hover .category-fade {
     opacity: 1;
 }
 
-.playlist-card:hover .playlist-title,
-.playlist-card:hover .playlist-subtitle {
+.category-card:hover .category-title,
+.category-card:hover .category-subtitle {
     color: rgba(255, 255, 255, 0.883);
 }
 
-.playlist-image {
+.category-image {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 15px;
 }
 
-.playlist-title {
+.category-title {
     font-weight: 800;
     font-size: 16px;
     color: #c4d0e3;
@@ -59,14 +59,14 @@
     -webkit-box-orient: vertical;
 }
 
-.playlist-subtitle {
+.category-subtitle {
     font-weight: 400;
     font-size: 12px;
     margin: 0px;
     color: #c4d0e37c;
 }
 
-.playlist-fade {
+.category-fade {
     position: absolute;
     right: 0;
     bottom: 0;

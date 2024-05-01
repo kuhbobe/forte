@@ -22,9 +22,6 @@ export default function Library() {
             });
             const newLikedSongs = response.data.items;
             setLikedSongs(prevLikedSongs => [...prevLikedSongs, ...newLikedSongs]);
-            if (response.data.next) {
-                fetchLikedSongs(offset + limit, limit);
-            }
         } catch (error) {
             console.error('Error fetching liked songs:', error);
         }
@@ -47,7 +44,7 @@ export default function Library() {
                             <p className="playlist-title">{song.track.name}</p>
                             <p className="playlist-subtitle">{song.track.artists.map(artist => artist.name).join(', ')}</p>
                             <div className="playlist-fade">
-                                <IconContext.Provider value={{ size: "50px", color: "#1DB954" }}>
+                                <IconContext.Provider value={{ size: "50px", color: "#2d8fcf" }}>
                                     <AiFillPlayCircle />
                                 </IconContext.Provider>
                             </div>
