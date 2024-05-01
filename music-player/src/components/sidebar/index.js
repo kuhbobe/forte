@@ -30,8 +30,8 @@ export default function Sidebar() {
     <div className="sidebar-container">
       <img src={image} className="profile-img" alt="profile" />
       <div>
+      <SidebarButton title="Profile" to="/profile" icon={<FaGripfire />}/>
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
-        <SidebarButton title="Profile" to="/profile" icon={<FaGripfire />}/>
         <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
         <SidebarButton
           title="Favorites"
