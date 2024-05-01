@@ -54,7 +54,7 @@ export default function Library() {
                         </div>
                     ))
                 ) : (
-                    <p>No liked songs found.</p>
+                    <p className="loading-text">Loading liked songs...</p>
                 )}
             </div>
         </div>

@@ -48,7 +48,7 @@ export default function Feed() {
                         </div>
                     ))
                 ) : (
-                    <p>No categories found.</p>
+                    <p className="loading-text">Loading feed...</p>
                 )}
             </div>
         </div>

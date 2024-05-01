@@ -66,6 +66,11 @@
     color: #c4d0e37c;
 }
 
+.loading-text {
+    color: white;
+}
+
+
 .playlist-fade {
     position: absolute;
     right: 0;

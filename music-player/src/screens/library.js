@@ -40,7 +40,7 @@ export default function Library() {
                         </div>
                     ))
                 ) : (
-                    <p>Loading...</p>
+                    <p className="loading-text">Loading playlists...</p>
                 )}
             </div>
         </div>
