@@ -10,7 +10,7 @@ export default function AudioPLayer({
   setCurrentIndex,
   total,
 }) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); // Initial state set to false
   const [trackProgress, setTrackProgress] = useState(0);
   var audioSrc = total[currentIndex]?.track.preview_url;
 
@@ -67,7 +67,7 @@ export default function AudioPLayer({
         setIsPlaying(true);
         startTimer();
     } else {
-        isReady.current = true;
+        isReady.current = false;
     }
 }, [currentIndex, audioSrc]);
 
@@ -103,7 +103,7 @@ export default function AudioPLayer({
       <div className="player-left-body">
         <ProgressCircle
           percentage={currentPercentage}
-          isPlaying={true}
+          isPlaying={isPlaying} // Update isPlaying prop
           image={currentTrack?.album?.images[0]?.url}
           size={300}
           color="#2d8fcf"

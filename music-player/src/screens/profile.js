@@ -24,7 +24,7 @@ export default function Profile() {
                 {userProfile ? (
                     <div className="user-profile">
                         {userProfile.images && userProfile.images.length > 0 && (
-                            <img src={userProfile.images[0].url} alt="Profile" className="profile-image" />
+                            <img src={userProfile.images[1].url} alt="Profile" className="profile-image" />
                         )}
                         <p className="profile-name">{userProfile.display_name ? userProfile.display_name : 'No Display Name'}</p>
                         {userProfile.email && (
