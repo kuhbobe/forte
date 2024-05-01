@@ -16,7 +16,7 @@ export default function Feed() {
         try {
             const response = await APIKit.get('browse/categories', {
                 params: {
-                    limit: 10 // You can adjust the limit as needed
+                    limit: 50 // You can adjust the limit as needed
                 }
             });
             setCategories(response.data.categories.items);

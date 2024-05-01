@@ -22,6 +22,9 @@ export default function Library() {
             });
             const newLikedSongs = response.data.items;
             setLikedSongs(prevLikedSongs => [...prevLikedSongs, ...newLikedSongs]);
+            if (response.data.next) {
+                fetchLikedSongs(offset + limit, limit);
+            }
         } catch (error) {
             console.error('Error fetching liked songs:', error);
         }
