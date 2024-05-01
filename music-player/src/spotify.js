@@ -19,6 +19,11 @@ export const setClientToken = (token) => {
     accessToken = token; // Store the access token when it's set
 }
 
+export const clearAccessToken = () => {
+    accessToken = ''; // Clear the access token
+    localStorage.removeItem('token'); // Remove access token from local storage
+}
+
 const getRefreshToken = async () => {
     // Get refresh token from local storage or wherever it's stored
     const refreshToken = localStorage.getItem('refresh_token');
@@ -61,5 +66,7 @@ apiClient.interceptors.request.use(async function(config) {
     config.headers.Authorization = "Bearer " + accessToken;
     return config;
 });
+
+
 
 export default apiClient;
