@@ -43,15 +43,20 @@ const getRefreshToken = async () => {
 
     try {
         const response = await fetch(url, payload);
+        if (!response.ok) {
+            throw new Error('Failed to refresh token');
+        }
         const data = await response.json();
         accessToken = data.access_token; // Update the access token
         localStorage.setItem('access_token', accessToken); // Store the new access token
+        console.log('Access token updated:', accessToken); // Log message when access token is updated
         return accessToken;
     } catch (error) {
         console.error('Error refreshing token:', error);
         throw error; // Throw error for handling
     }
 };
+
 
 // Intercept requests to add Authorization header with access token
 apiClient.interceptors.request.use(async function(config) {
