@@ -2,7 +2,7 @@ a {
     text-decoration: none !important;
 }
 
-.btn-body{
+.btn-body {
     height: 80px;
     width: 80px;
     border-radius: 20px;
@@ -14,10 +14,10 @@ a {
     margin: 5px auto;
     transition: all 0.2s ease;
     background-color: rgba(244, 187, 146, 0.0);
-
+    cursor: pointer; /* Ensure cursor pointer for all buttons */
 }
 
-.btn-title{
+.btn-title {
     margin: 4px auto;
     font-weight: 600;
     font-size: 14px;
