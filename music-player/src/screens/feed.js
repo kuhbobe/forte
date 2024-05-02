@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import APIKit from '../spotify';
-import './feed.css'
+import './feed.css';
 import { IconContext } from 'react-icons';
 import { AiFillPlayCircle } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
@@ -27,8 +27,9 @@ export default function Feed() {
 
     const navigate = useNavigate();
     const playCategory = (categoryId) => {
-        navigate(`/category/${categoryId}`);
+        navigate('/player', { state: { id: categoryId } });
     }
+    
 
     return (
         <div className='screen-container'>
