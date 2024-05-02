@@ -4,36 +4,32 @@ import Controls from "./controls";
 import ProgressCircle from "./progressCircle";
 import WaveAnimation from "./waveAnimation";
 
-export default function AudioPLayer({
+export default function AudioPlayer({
   currentTrack,
   currentIndex,
   setCurrentIndex,
   total,
 }) {
-  const [isPlaying, setIsPlaying] = useState(false); // Initial state set to false
+  const [isPlaying, setIsPlaying] = useState(false);
   const [trackProgress, setTrackProgress] = useState(0);
-  var audioSrc = total[currentIndex]?.track.preview_url;
+  const audioSrc = total[currentIndex]?.track.preview_url;
 
-  const audioRef = useRef(new Audio(total[0]?.track.preview_url));
-
+  const audioRef = useRef(new Audio(audioSrc));
   const intervalRef = useRef();
-
   const isReady = useRef(false);
 
   const { duration } = audioRef.current;
-
   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
   const startTimer = () => {
     clearInterval(intervalRef.current);
-
     intervalRef.current = setInterval(() => {
       if (audioRef.current.ended) {
         handleNext();
       } else {
         setTrackProgress(audioRef.current.currentTime);
       }
-    }, [1000]);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -61,24 +57,21 @@ export default function AudioPLayer({
     audioRef.current.pause();
     audioRef.current = new Audio(audioSrc);
     setTrackProgress(audioRef.current.currentTime);
-
-    if (isReady.current) {
+    audioRef.current.onloadeddata = () => {
+      isReady.current = true;
+      if (isPlaying) {
         audioRef.current.play();
-        setIsPlaying(true);
         startTimer();
-    } else {
-        isReady.current = false;
-    }
-}, [currentIndex, audioSrc]);
-
+      }
+    };
+  }, [currentIndex, audioSrc]);
 
   useEffect(() => {
     return () => {
-        audioRef.current.pause();
-        clearInterval(intervalRef.current);
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
     };
-}, []);
-
+  }, []);
 
   const handleNext = () => {
     if (currentIndex < total.length - 1) {
@@ -94,16 +87,16 @@ export default function AudioPLayer({
   const addZero = (n) => {
     return n > 9 ? "" + n : "0" + n;
   };
-  const artists = [];
-  currentTrack?.album?.artists.forEach((artist) => {
-    artists.push(artist.name);
-  });
+
+  const artists = currentTrack?.album?.artists.map((artist) => artist.name) || [];
+
+
   return (
     <div className="player-body flex">
       <div className="player-left-body">
         <ProgressCircle
           percentage={currentPercentage}
-          isPlaying={isPlaying} // Update isPlaying prop
+          isPlaying={isPlaying}
           image={currentTrack?.album?.images[0]?.url}
           size={300}
           color="#2d8fcf"
