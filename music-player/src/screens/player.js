@@ -51,6 +51,23 @@ export default function Player() {
   }, [location.state]);
 
   
+  useEffect(() => {
+    if (location.state && location.state.id) {
+        apiClient
+            .get("tracks/" + location.state.id)
+            .then((res) => {
+                // Set the current track based on the fetched track
+                setCurrentTrack(res.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching track:', error);
+            });
+    }
+}, [location.state]);
+
+
+
+  
     useEffect(() => {
         setCurrentTrack(tracks[currentIndex]?.track);
     }, [currentIndex, tracks]);
