@@ -50,20 +50,23 @@ export default function Player() {
       }
   }, [location.state]);
 
-  
-  useEffect(() => {
-    if (location.state && location.state.id) {
-        apiClient
-            .get("tracks/" + location.state.id)
-            .then((res) => {
-                // Set the current track based on the fetched track
-                setCurrentTrack(res.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching track:', error);
-            });
-    }
+// From Liked Songs
+useEffect(() => {
+  if (location.state && location.state.id) {
+      apiClient
+          .get("tracks/" + location.state.id)
+          .then((res) => {
+              // Wrap the fetched track data in an array to match the format of playlist tracks
+              const trackData = [{ track: res.data }];
+              setTracks(trackData);
+              setCurrentTrack(res.data);
+          })
+          .catch((error) => {
+              console.error('Error fetching track:', error);
+          });
+  }
 }, [location.state]);
+
 
 
 
