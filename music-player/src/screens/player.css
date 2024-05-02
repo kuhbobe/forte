@@ -12,3 +12,8 @@
     justify-content: space-between;
   }
   
+  
+  .screen-containe {
+    width: 100%;
+    height: 100%;
+}
