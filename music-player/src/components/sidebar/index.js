@@ -8,6 +8,8 @@ import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import { TbCircleLetterF } from "react-icons/tb";
 import apiClient, { clearAccessToken } from "../../spotify";
+import profileImage from "./f-logo.jpeg"; // Update the path as per your folder structure
+
 
 export default function Sidebar() {
   const [image, setImage] = useState("https://picsum.photos/536/354");
@@ -25,8 +27,8 @@ export default function Sidebar() {
 
   return (
     <div className="sidebar-container">
-      <div className="profile-button">
-      <TbCircleLetterF className="profile-img" />   
+      <div className="logo-icon">
+      <img src={profileImage} className="logo-img" alt="logo" />
       </div>
       <div>
         <SidebarButton title="" to="/profile" icon={<img src={image} className="profile-icon" alt="profile" />} />

@@ -7,23 +7,24 @@
     justify-content: space-between;
 }
 
-.profile-button {
+.logo-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 55px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */ 
   }
   
-  .profile-img {
+  .logo-img {
     border-radius: 50%;
     width: 100%; /* Ensure the image takes the full width of the container */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
   }
   
+  
   .profile-icon {
     border-radius: 50%;
-    width: 75%; /* Adjust the width as needed */
+    width: 65%; /* Adjust the width as needed */
     height: auto; /* Adjust the height as needed */
     margin-top: 6px;
   }
