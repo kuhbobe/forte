@@ -14,6 +14,19 @@
   
   
   .screen-containe {
+    
     width: 100%;
     height: 100%;
-}
+    border-radius: 30px;
+    background-color: #000000;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    background-image: repeating-radial-gradient(
+        circle at center left,
+        transparent 0,
+        #1e2a3e 100px 
+        ),
+        repeating-linear-gradient(#0f162155, #233656)
+  }
+
