@@ -53,7 +53,7 @@
 .playlist-card {
     position: relative;
     width: calc(20% - 20px);
-    height: 65%;
+    height: 55%;
     border-radius: 20px;
     background-color: rgb(30, 42, 62);
     border: 1px solid rgba(54, 69, 98, 0.18);
