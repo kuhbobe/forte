@@ -9,26 +9,26 @@ export default function Library() {
     const [likedSongs, setLikedSongs] = useState([]);
 
     useEffect(() => {
-        fetchLikedSongs();
-    }, []);
-
-    const fetchLikedSongs = async (offset = 0, limit = 50) => {
-        try {
-            const response = await APIKit.get('me/tracks', {
-                params: {
-                    limit: limit,
-                    offset: offset
+        const fetchLikedSongs = async (offset = 0, limit = 50) => {
+            try {
+                const response = await APIKit.get('me/tracks', {
+                    params: {
+                        limit: limit,
+                        offset: offset
+                    }
+                });
+                const newLikedSongs = response.data.items;
+                setLikedSongs(prevLikedSongs => [...prevLikedSongs, ...newLikedSongs]);
+                if (response.data.next) {
+                    fetchLikedSongs(offset + limit, limit);
                 }
-            });
-            const newLikedSongs = response.data.items;
-            setLikedSongs(prevLikedSongs => [...prevLikedSongs, ...newLikedSongs]);
-            if (response.data.next) {
-                fetchLikedSongs(offset + limit, limit);
+            } catch (error) {
+                console.error('Error fetching liked songs:', error);
             }
-        } catch (error) {
-            console.error('Error fetching liked songs:', error);
-        }
-    };
+        };
+
+        fetchLikedSongs();
+    }, []); // <- Empty dependency array signifies that this effect runs only once on mount
 
     const navigate = useNavigate();
     const playSong = (id) => {
