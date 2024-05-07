@@ -26,22 +26,24 @@ export default function Profile() {
                         {userProfile.images && userProfile.images.length > 0 && (
                             <img src={userProfile.images[1].url} alt="Profile" className="profile-image" />
                         )}
-                        <p className="profile-name">{userProfile.display_name ? userProfile.display_name : 'No Display Name'}</p>
-                        {userProfile.email && (
-                            <p className="profile-email">{userProfile.email}</p>
-                        )}
-                        {userProfile.country && (
-                            <p className="profile-country">{userProfile.country}</p>
-                        )}
-                        {userProfile.followers && (
-                            <p className="profile-followers">Followers: {userProfile.followers.total}</p>
-                        )}
-                        {userProfile.product && (
-                            <p className="profile-product">Subscription: {userProfile.product}</p>
-                        )}
-                        {userProfile.external_urls && (
-                            <a href={userProfile.external_urls.spotify} className="profile-spotify-url" target="_blank" rel="noopener noreferrer">Spotify Profile</a>
-                        )}
+                        <div className='user-info'>
+                            <p className="profile-name">{userProfile.display_name ? userProfile.display_name : 'No Display Name'}</p>
+                            {userProfile.email && (
+                                <p className="profile-email">{userProfile.email}</p>
+                            )}
+                            {userProfile.country && (
+                                <p className="profile-country">{userProfile.country}</p>
+                            )}
+                            {userProfile.followers && (
+                                <p className="profile-followers">Followers: {userProfile.followers.total}</p>
+                            )}
+                            {userProfile.product && (
+                                <p className="profile-product">Subscription: {userProfile.product}</p>
+                            )}
+                            {userProfile.external_urls && (
+                                <a href={userProfile.external_urls.spotify} className="profile-spotify-url" target="_blank" rel="noopener noreferrer">Spotify Profile</a>
+                            )}
+                        </div>
                     </div>
                 ) : (
                     <p>Loading...</p>

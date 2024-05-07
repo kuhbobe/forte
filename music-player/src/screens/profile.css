@@ -11,7 +11,7 @@
 .user-profile {
     width: 100%; /* Adjusted width */
     min-width: 300px;
-    height: 50%;
+    height: 60%;
     border-radius: 20px;
     background-color: rgb(30, 42, 62);
     border: 1px solid rgba(54, 69, 98, 0.18);
@@ -95,7 +95,7 @@
     font-weight: 600;
     margin-top: 50px;
     display: block; /* Change display to block to center horizontally */
-    text-align: center; /* Center the text horizontally */
+    text-align: left; /* Center the text horizontally */
 }
 
 .profile-spotify-url:hover {

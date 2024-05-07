@@ -76,7 +76,7 @@ useEffect(() => {
     }, [currentIndex, tracks]);
   
     return (
-        <div className="screen-container flex">
+        <div className="screen-container flex player-body">
             <div className="left-player-body">
                 <AudioPlayer
                     currentTrack={currentTrack}

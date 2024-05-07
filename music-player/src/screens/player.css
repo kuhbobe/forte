@@ -1,14 +1,18 @@
+.player-body {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .left-player-body {
-    width: 68%;
-    margin-right: 2%;
-    height: 100%;
-  }
+  width: 65%;
+  margin-right: 2%;
+  height: 100%;
+}
   
-  .right-player-body {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
+.right-player-body {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
