@@ -21,7 +21,7 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
-  width: 100%; /* Adjusted width */
+  width: 130%; /* Adjusted width */
   height: 70px; /* Adjusted height */
   border-radius: 20px;
   background-color: rgb(30, 42, 62);
@@ -79,6 +79,20 @@
 }
 
 .song-actions {
-  display: flex;
+  display: none; /* Initially hide the play button */
   align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity 0.3s ease; /* Add transition for opacity */
+  margin-left: auto; /* Push the play button to the far right */
+}
+
+.song-item:hover .song-actions {
+  display: flex; /* Display the play button when hovering over the song item */
+  opacity: 1; /* Set opacity to 1 when hovering */
+}
+
+/* Adjust margin-right to move the play button slightly to the left */
+.song-actions svg {
+  margin-right: 50px; /* Adjust as needed */
 }
