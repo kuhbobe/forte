@@ -21,8 +21,8 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
-  width: 130%; /* Adjusted width */
-  height: 70px; /* Adjusted height */
+  width: 130%; 
+  height: 70px; 
   border-radius: 20px;
   background-color: rgb(30, 42, 62);
   border: 1px solid rgba(54, 69, 98, 0.18);
@@ -56,8 +56,8 @@
 }
 
 .song-image {
-  width: 50px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
+  width: 50px; 
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -79,20 +79,19 @@
 }
 
 .song-actions {
-  display: none; /* Initially hide the play button */
+  display: none; 
   align-items: center;
-  justify-content: flex-end; /* Align items to the right */
-  opacity: 0; /* Initially set opacity to 0 */
-  transition: opacity 0.3s ease; /* Add transition for opacity */
-  margin-left: auto; /* Push the play button to the far right */
+  justify-content: flex-end; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  margin-left: auto; 
 }
 
 .song-item:hover .song-actions {
-  display: flex; /* Display the play button when hovering over the song item */
-  opacity: 1; /* Set opacity to 1 when hovering */
+  display: flex; 
+  opacity: 1; 
 }
 
-/* Adjust margin-right to move the play button slightly to the left */
 .song-actions svg {
-  margin-right: 50px; /* Adjust as needed */
+  margin-right: 50px; 
 }
