@@ -9,9 +9,9 @@
 }
 
 .user-profile {
-    width: 30%;
+    width: 100%; /* Adjusted width */
     min-width: 300px;
-    height: 100%;
+    height: 60%;
     border-radius: 20px;
     background-color: rgb(30, 42, 62);
     border: 1px solid rgba(54, 69, 98, 0.18);
@@ -24,27 +24,31 @@
     );
     transition: all 0.2s ease;
     cursor: pointer;
-    
+    display: flex; /* Added */
 }
 
 .user-profile .profile-image {
-    width: 100%;
+    width: 30%; /* Adjusted width */
     border-radius: 15px;
     image-rendering: auto; /* Set image rendering to auto */
     image-rendering: crisp-edges; /* Fallback for browsers that don't support auto */
+    margin-right: 2%; /* Added */
 }
 
 .user-profile:hover {
-    transform: scale(1.02);
+    transform: scale(1.005);
 }
 
 .user-profile:hover .user-profile-fade {
     opacity: 1;
 }
 
+.user-info {
+    width: 68%; /* Adjusted width */
+}
 
 .user-profile .profile-name {
-    text-align: center;
+    text-align: left; /* Adjusted alignment */
     font-weight: 800;
     font-size: 16px;
     color: #c4d0e3;
@@ -57,13 +61,13 @@
 .profile-email,
 .profile-country,
 .profile-followers,
- .profile-product {
+.profile-product {
     font-weight: 400;
     font-size: 12px;
     margin: 0px;
     color: #ffffff;
-    text-align: center;
-   }
+    text-align: left; /* Adjusted alignment */
+}
 
 .user-profile-fade {
     position: absolute;
@@ -85,18 +89,15 @@
     transition: 0.5s ease;
 }
 
-
 .profile-spotify-url {
     color: #2d8fcf;
     text-decoration: none;
     font-weight: 600;
     margin-top: 50px;
     display: block; /* Change display to block to center horizontally */
-    text-align: center; /* Center the text horizontally */
+    text-align: left; /* Center the text horizontally */
 }
-
 
 .profile-spotify-url:hover {
     text-decoration: underline;
 }
-
