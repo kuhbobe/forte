@@ -7,9 +7,25 @@
     justify-content: space-between;
 }
 
-.profile-img{
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    margin-top: 20px;
-}
+.logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */ 
+  }
+  
+  .logo-img {
+    border-radius: 50%;
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  }
+  
+  
+  .profile-icon {
+    border-radius: 50%;
+    width: 65%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    margin-top: 6px;
+  }
+  

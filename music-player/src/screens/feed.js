@@ -50,7 +50,7 @@ export default function Feed() {
             <div className="search-container">
                 <input
                     type="text"
-                    placeholder="Search categories..."
+                    placeholder="Let's try something new..."
                     value={searchQuery}
                     onChange={handleSearch}
                 />

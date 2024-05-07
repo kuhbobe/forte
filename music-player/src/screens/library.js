@@ -39,7 +39,7 @@ export default function Library() {
             <div className="search-container">
                 <input
                     type="text"
-                    placeholder="Search playlists..."
+                    placeholder="What's the vibe for today?"
                     value={searchQuery}
                     onChange={handleSearch}
                 />

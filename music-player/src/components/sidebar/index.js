@@ -1,14 +1,14 @@
-// Sidebar.js
-
 import React, { useEffect, useState } from "react";
 import "./sidebar.css";
 import SidebarButton from "./sidebarButton";
 import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
-import apiClient, { clearAccessToken } from "../../spotify"; // Import clearAccessToken function
+import apiClient, { clearAccessToken } from "../../spotify";
+import profileImage from "./f-logo.jpeg"; // Update the path as per your folder structure
+
 
 export default function Sidebar() {
   const [image, setImage] = useState("https://picsum.photos/536/354");
@@ -20,31 +20,23 @@ export default function Sidebar() {
   }, []);
 
   const handleSignOut = () => {
-    clearAccessToken(); // Call clearAccessToken function to sign out
-    // You can also perform any other necessary sign-out actions here
-    // For example, redirecting the user to the login page
+    clearAccessToken();
     window.location.reload();
   };
 
   return (
     <div className="sidebar-container">
-      <img src={image} className="profile-img" alt="profile" />
+      <div className="logo-icon">
+      <img src={profileImage} className="logo-img" alt="logo" />
+      </div>
       <div>
-      <SidebarButton title="Profile" to="/profile" icon={<FaGripfire />}/>
+        <SidebarButton title="" to="/profile" icon={<img src={image} className="profile-icon" alt="profile" />} />
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
         <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
-        <SidebarButton
-          title="Favorites"
-          to="/favorites"
-          icon={<MdFavorite />}
-        />
+        <SidebarButton title="Favorites" to="/favorites" icon={<MdFavorite />} />
         <SidebarButton title="Library" to="/" icon={<IoLibrary />} />
       </div>
-      <SidebarButton
-        title="Sign out"
-        onClick={handleSignOut}
-        icon={<FaSignOutAlt />}
-      />
+      <SidebarButton title="Sign out" onClick={handleSignOut} icon={<FaSignOutAlt />} />
     </div>
   );
 }
